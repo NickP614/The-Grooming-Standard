@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="tgs">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TGS - The Grooming Standard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="min-height:15%">
+    <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/home" style="padding: 2px 2px;">
+            <img src="TGS-stock_photos/tgs-logo.jpg" style="width: 36%;">
+            </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right"   style="margin-top: 5%;">
+                <li>
+                    <a href="about.html">What is TGS?</a>
+                </li>
+                <li>
+                    <a href="services.html">Become a vendor</a>
+                </li>
+                <li>
+                    <a href="contact.html">Barbers blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+                <li>
+                    <button class="btn btn-primary">Sign in</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Header Carousel -->
+<header id="myCarousel" ng-show="$root.showCarousel" class="carousel slide" style="height:70%;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="width:100%">
+        <div class="item active">
+            <div class="fill" style="background-image:url('../TGS-stock_photos/stock-photo-52621018-barber.jpg');">
+            </div>
+            <div class="carousel-caption">
+                <h2>Break Free From the Chains</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill"
+                 style="background-image:url('../TGS-stock_photos/stock-photo-48664290-shaving-brushes-at-barbershop.jpg');">
+            </div>
+            <div class="carousel-caption">
+                <h2>Join the Custom Revolution</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill"
+                 style="background-image:url('../TGS-stock_photos/stock-photo-50019520-barber-s-chair-ghost-town.jpg');">
+
+            </div>
+            <div class="carousel-caption">
+                <h2>Elevating Standards With a Custom Touch</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+  <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+</body>
+
+    <!-- JavaScript libraries -->
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/angular-route.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="../js/ui-bootstrap-tpls-0.12.1.min.js"></script>-->
+    <script type="text/javascript" src="../app.js"></script>
+
+</html>
