@@ -55,19 +55,11 @@
           <label class="form-label">4. Is a complimentary hot towel and straight razor neck shave important to you?</label>
           <div class="radio">
             <label>
-              <input type="radio">Loud/fun</label>
+              <input type="radio">Yes</label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio">Family oriented</label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio">Trendy</label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio">Down to business</label>
+              <input type="radio">No</label>
           </div>
         </div>
       </div>
@@ -87,11 +79,20 @@
                     <a class="btn btn-primary btn-lg btn-block" ng-click="survey_page=2">Continue</a>
       </div>
 
-//
 
 <div ng-show="survey_page == 2">
 
     <h3>6. Specify your preferred haircut/style from the images below.</h3>
+    <div class="row" ng-repeat="row in haircuts_list">
+         <div class="col-md-4" ng-repeat="haircut in row">
+<img src="TGS-stock_photos/stock-photo-{{haircut[0] + haircut[1]}}" width="200" height="200" overflow = "hidden">
+             <div class="radio">
+            <label>
+              <input type="radio">Select this style</label>
+          </div>
+             </div>
+        </div>
+<!--
       <div class="row">
         <div class="col-md-4">
           <img src="https://builder.divshot.com/img/placeholder-100x100.gif">
@@ -161,6 +162,7 @@
           </div>
         </div>
       </div>
+      -->
       <div class="row">
         <div class="col-md-6">
           <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=1">Back</a>
@@ -172,4 +174,98 @@
 
 </div>
 
+
+        <div ng-show='survey_page == 3'>
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-label">7.  Indicate your preference.</label>
+          <div class="radio">
+            <label>
+              <input type="radio">Male Barber</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">Female Barber</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">8. Indicate your ideal price range for a haircut.</label>
+          <div class="radio">
+            <label>
+              <input type="radio">$12 and under</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">$13-20</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">$21+</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-label">9. Indicate the proximity you are willing to travel.</label>
+          <div class="radio">
+            <label>
+              <input type="radio">Less than 5 miles</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">6 to 15 miles</label>
+          </div>
+            <div class="radio">
+            <label>
+              <input type="radio">Over 15 miles</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">10. Is the barbers advice on your cut/style significant?</label>
+          <div class="radio">
+            <label>
+              <input type="radio">Yes</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-label">11. How many barbers operate at a time in your ideal barbershop?</label>
+           <div class="radio">
+            <label>
+              <input type="radio">2 or less</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">3-4</label>
+          </div>
+            <div class="radio">
+            <label>
+              <input type="radio">5+</label>
+          </div>
+        </div>
+          <div class="col-md-6">
+          <label class="form-label">11. How often do you get your haircut?</label>
+           <div class="radio">
+            <label>
+              <input type="radio">Once a month or less</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio">More than once a month</label>
+          </div>
+        </div>
+        </div>
+                     <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=2">Back</a>
+        </div>
+        <div class="col-md-6">
+          <a class="btn btn-primary btn-lg btn-block" ng-click="survey_page=4">Continue</a>
+        </div>
+      </div>
     </div>
