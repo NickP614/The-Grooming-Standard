@@ -109,4 +109,26 @@ $scope.haircuts = $scope.shuffle($scope.haircuts);
 
     console.log($scope.haircuts_list);
 
+
+    $scope.questions = [
+    ['Years of experience', '1'],
+    ['Personality', '2'],
+    ['Appointment', '3'],
+    ['Hot towel and straight razor neck shave', '4'],
+    ['Beard trim service', '5'],
+    ['haircut/style selection', '6'],
+    ['Male/Female barber', '7'],
+    ['Price', '8'],
+    ['Travel distance', '9'],
+    ['Barbers advice', '10'],
+    ['Number of Barbers', '11']
+    ];
+
+    $scope.range=[1,2,3,4,5,6,7,8,9,10,11];
+    $scope.rankings = {}
+
+    $scope.update = function(question_number){
+
+    }
+
 });

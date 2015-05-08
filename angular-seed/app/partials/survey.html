@@ -249,7 +249,7 @@
           </div>
         </div>
           <div class="col-md-6">
-          <label class="form-label">11. How often do you get your haircut?</label>
+          <label class="form-label">12. How often do you get your haircut?</label>
            <div class="radio">
             <label>
               <input type="radio">Once a month or less</label>
@@ -269,3 +269,32 @@
         </div>
       </div>
     </div>
+
+        <div ng-show='survey_page == 4'>
+
+            <h3>13. Rank the questions from most important to least important</h3> <br>
+            <table style="width:100%">
+                <tr>
+                    <th>Question</th>
+                    <th>Ranking</th>
+                </tr>
+
+                <tr ng-repeat="question in questions">
+                    <td>{{ question[0] }}</td>
+                    <td>
+                        <select data-ng-model="rankings['question_'+question[1]]" ng-options="number for number in range" ng-change="update([question[1])"></select>
+                    </td>
+                </tr>
+
+            </table>
+
+        <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=3">Back</a>
+        </div>
+        <div class="col-md-6">
+          <a class="btn btn-primary btn-lg btn-block" ng-click="survey_page=5">Continue</a>
+        </div>
+      </div>
+        </div>
+</div>
