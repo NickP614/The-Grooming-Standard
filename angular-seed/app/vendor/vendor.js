@@ -127,4 +127,9 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   $scope.questions = $scope.result[1]
   if ($scope.validation){$scope.vendor_page += 1}
   }
+
+  $scope.vendor_info = [['Full Name'], ['Address'], ['Phone'], ['Website'], ['Email'], ['Password']];
+  $scope.submit_vendor_info = function(){
+    console.log($scope.vendor_info);
+  }
 });
