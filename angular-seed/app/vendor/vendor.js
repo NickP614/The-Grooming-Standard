@@ -1,8 +1,8 @@
-angular.module('survey')
-.controller('surveyController', function($scope, $rootScope, $location, $anchorScroll, $http, surveyService) {
+angular.module('vendor', [])
+.controller('vendorController', function($scope, $rootScope, $location, $anchorScroll, $http, surveyService) {
 $rootScope.showCarousel = false
 $scope.validation = true;
-$scope.survey_page = 1;
+$scope.vendor_page = 1;
 $scope.validate_capture = surveyService.validate_and_capture
 $scope.update_options = surveyService.update_options
 
@@ -110,7 +110,7 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
     $scope.stores[2].push($scope.store_matches[2]);
 
     $scope.store_select = function(selected_store){
-    $scope.survey_page=6;
+    $scope.vendor_page=6;
     $scope.selected_store = selected_store;
     $scope.scrollTop();
     }
@@ -125,6 +125,6 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   $scope.navigate = function(){
   $scope.validation = $scope.result[0]
   $scope.questions = $scope.result[1]
-  if ($scope.validation){$scope.survey_page += 1}
+  if ($scope.validation){$scope.vendor_page += 1}
   }
 });

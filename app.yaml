@@ -41,8 +41,11 @@ handlers:
   upload: angular-seed/app/.*\.map
   mime_type: text/javascript; charset=utf-8
 
+- url: /submit_survey
+  script: angular-seed.app.survey.survey.app
 
-
+- url: /submit_vendor
+  script: angular-seed.app.vendor.vendor.app
 
 libraries:
 - name: webapp2

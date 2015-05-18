@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('tgs', ['survey', 'ngRoute']);
-angular.module('tgs').config(['$routeProvider', function($routeProvider) {
+angular.module('tgs', ['survey', 'vendor', 'ngRoute'])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider
         // route for the home page
         .when('/home', {
@@ -16,9 +16,9 @@ angular.module('tgs').config(['$routeProvider', function($routeProvider) {
         })
 
         // route for the Become a vendor page
-        .when('/vendors', {
-            templateUrl : 'partials/vendors.html',
-            controller  : 'vendorsController'
+        .when('/vendor', {
+            templateUrl : 'vendor/vendor.html',
+            controller  : 'vendorController'
         })
 
         // route for the Barbers blog page
@@ -40,14 +40,18 @@ angular.module('tgs').config(['$routeProvider', function($routeProvider) {
         })
 
         .otherwise({redirectTo: '/home'});
-}]);
-angular.module('tgs').controller('mainController', function($scope, $rootScope, $location) {
+}])
+.controller('mainController', function($scope, $rootScope, $location) {
 $rootScope.showCarousel = true
 
     // redirect to survey
     $scope.start_survey=function(){
     console.log('survey function called')
     $location.path('/survey')
+    }
+
+    $scope.start_vendor=function(){
+    $location.path('/vendor')
     }
 
 });
