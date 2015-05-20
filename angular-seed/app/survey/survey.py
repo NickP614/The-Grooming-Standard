@@ -41,5 +41,5 @@ class SubmitSurvey(webapp2.RequestHandler):
         #self.response.out.write(json.dumps(data))
 
 app = webapp2.WSGIApplication([
-    ('/submit_survey', SubmitSurvey),
+    ('/submit_survey', SubmitSurvey)
 ], debug=True)

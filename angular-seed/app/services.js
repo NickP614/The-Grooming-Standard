@@ -1,5 +1,5 @@
 angular.module('survey', [])
-.service('surveyService', function($q, $http){
+.service('surveyService', function($http){
 
     this.shuffle = function (array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
@@ -41,7 +41,7 @@ this.update_options = function(question_number, old_value, page4, available_opti
     section_questions.push(questions[section[s].number-1]);
 
     if (!questions[section[s].number-1][check_for]){
-        return [false, questions];
+        return false;
         }
     else{
         localStorage.setItem("question_"+ s.number, questions[section[s].number-1][check_for]);
@@ -50,9 +50,32 @@ this.update_options = function(question_number, old_value, page4, available_opti
   }
 
   $http.post(post_to, {questions:questions, email:''})
-  return [true, questions];
+  return true;
 
 };
 
+}).service('vendorService', function($http){
+this.submit_vendor_info = function(vendor_info){
+
+  for (var v in vendor_info){
+        if (v != 5 && !vendor_info[v][1]){
+        return false;
+        }
+  }
+
+  $http.post('/vendor_info', vendor_info)
+  return true;
+
+};
+
+this.admin_sign_in = function(){
+$http.get('/admin_sign_in').
+success(function(data, status, headers, config) {
+
+  }).
+  error(function(data, status, headers, config) {
+
+  });
+}
 });
 

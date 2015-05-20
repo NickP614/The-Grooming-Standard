@@ -1,88 +1,32 @@
     <div class="container" style="margin-top:15%">
 <a id="top"></a>
-        <div ng-show='vendor_page == 1'>
-            <h1>13 questions away from your custom barber matches!</h1>
-            <div class="row">
-        <div class="col-md-6" ng-repeat="question in page1">
-            <label class="form-label">{{ question.number }}.  {{ question.text }}</label>
-          <div class="radio" ng-repeat="option in question.options">
-            <label>
-              <input type="radio" ng-model="questions[question.number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
-          </div>
-            </div>
-                </div>
-            <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
-            <a class="btn btn-primary btn-lg btn-block"
-               ng-click="result = validate_capture(page1, 'answer', questions, '/submit_vendor'); navigate();">Continue</a><br>
-            </div>
-
-        <div ng-show="vendor_page == 2">
-<h1>8 questions away from your custom barber matches!</h1>
-    <h3>6. Specify your preferred haircut/style from the images below.</h3>
-    <div class="row" ng-repeat="row in haircuts_list">
-         <div class="col-md-4" ng-repeat="haircut in row">
-<img src="TGS-stock_photos/stock-photo-{{haircut[0]}}" width="200" height="200" overflow = "hidden">
-             <div class="radio">
-            <label>
-              <input type="radio" ng-model="questions[5]['answer']" ng-value="haircut[1]">Select this style</label>
-          </div>
-             </div>
-        </div>
-<div class="alert alert-danger" ng-show="!validation">Please select a hairstyle to continue!</div>
-      <div class="row">
-        <div class="col-md-6">
-          <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=1; scrollTop()">Back</a><br>
-        </div>
-        <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page2, 'answer', questions, '/submit_vendor'); navigate();">Continue</a><br>
-        </div>
-      </div>
-
-</div>
-
-        <div ng-show='vendor_page == 3'>
-            <h1>7 questions away from your custom barber matches!</h1>
-      <div class="row">
-        <div class="col-md-6" ng-repeat="question in page3">
-            <label class="form-label">{{ question.number }}.  {{ question.text }}</label>
-          <div class="radio" ng-repeat="option in question.options">
-            <label>
-              <input type="radio" ng-model="questions[question.number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
-          </div>
-            </div>
-                </div>
-                     <div class="row">
-                         <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
-        <div class="col-md-6">
-          <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=2; scrollTop()">Back</a><br>
-        </div>
-        <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page3, 'answer', questions, '/submit_vendor'); navigate();">Continue</a><br>
-        </div>
-      </div>
-    </div>
-
-        <div ng-show='vendor_page == 4'>
-<h1>1 question away from your custom barber matches!</h1>
-            <h3>Place Barbershop contact info below.</h3>
+        <div ng-show='become_vendor == 1'>
+            <h1>There are 2 steps to become a TGS vendor.</h1>
+        <h3>Step 1: Enter in your barber shop information below.</h3>
+        <h3>Step 2: A member of The Grooming Standard team will contact you for further information.</h3>
             <div class="row">
         <div class="col-md-6" ng-repeat="info in vendor_info">
             <label class="form-label">{{ info[0] }}</label>
-            <input type="text" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <input ng-if="$index != 2 && $index!= 4" type="text" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <input ng-if="$index == 2" type="number" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <input ng-if="$index == 4" type="email" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <br>
             </div>
                 </div>
             <br>
 <div class="alert alert-danger" ng-show="!validation">Please complete all contact info!</div>
         <div class="row">
-        <div class="col-md-6">
-          <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=3; scrollTop()">Back</a><br>
-        </div>
-        <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="submit_vendor_info()">Continue</a><br>
+        <div class="col-md-12">
+
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = submit_vendor_info(vendor_info); navigate('vendor');">Continue</a><br>
         </div>
       </div>
         </div>
-
+<div ng-show='become_vendor == 2'>
+    <h1>Thanks for your interest in becoming a vendor of The Grooming Standard!</h1>
+        <h3>A member of our team will reach out to you within the week to learn more about your barbershop and add it to the application.</h3><br>
+    <a class="btn btn-primary btn-lg btn-block" ng-click="return_home()">Return to home page</a><br>
+</div>
 
         </div>
 

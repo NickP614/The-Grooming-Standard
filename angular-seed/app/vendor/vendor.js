@@ -1,8 +1,9 @@
 angular.module('vendor', [])
-.controller('vendorController', function($scope, $rootScope, $location, $anchorScroll, $http, surveyService) {
+.controller('vendorController', function($scope, $rootScope, $location, $anchorScroll, $http, surveyService, vendorService) {
 $rootScope.showCarousel = false
 $scope.validation = true;
-$scope.vendor_page = 1;
+$scope.vendor_page = 0;
+$scope.become_vendor = 1;
 $scope.validate_capture = surveyService.validate_and_capture
 $scope.update_options = surveyService.update_options
 
@@ -122,14 +123,20 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   };
   $scope.scrollTop();
 
-  $scope.navigate = function(){
-  $scope.validation = $scope.result[0]
-  $scope.questions = $scope.result[1]
-  if ($scope.validation){$scope.vendor_page += 1}
+  $scope.navigate = function(page){
+  $scope.validation = $scope.result
+  if ($scope.validation && page == 'admin'){$scope.vendor_page += 1}
+  else if ($scope.validation && page == 'vendor'){$scope.become_vendor += 1}
+  $scope.scrollTop();
   }
 
-  $scope.vendor_info = [['Full Name'], ['Address'], ['Phone'], ['Website'], ['Email'], ['Password']];
-  $scope.submit_vendor_info = function(){
-    console.log($scope.vendor_info);
-  }
+  $scope.vendor_info = [['Barbershop Name'], ['Address'], ['Phone'], ['Contact Name'], ['Email'], ['Website']];
+  $scope.submit_vendor_info = vendorService.submit_vendor_info
+
+  $scope.return_home=function(){
+    $location.path('/home')
+    }
+
+    $scope.admin_sign_in = vendorService.admin_sign_in
+
 });

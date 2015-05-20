@@ -21,6 +21,11 @@ angular.module('tgs', ['survey', 'vendor', 'ngRoute'])
             controller  : 'vendorController'
         })
 
+        .when('/admin', {
+            templateUrl : 'vendor/vendor_admin.html',
+            controller  : 'vendorController'
+        })
+
         // route for the Barbers blog page
         .when('/blog', {
             templateUrl : 'partials/blog.html',

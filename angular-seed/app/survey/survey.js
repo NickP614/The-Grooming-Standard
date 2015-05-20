@@ -123,8 +123,8 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   $scope.scrollTop();
 
   $scope.navigate = function(){
-  $scope.validation = $scope.result[0]
-  $scope.questions = $scope.result[1]
+  $scope.validation = $scope.result
   if ($scope.validation){$scope.survey_page += 1}
+  $scope.scrollTop();
   }
 });
