@@ -1,5 +1,5 @@
 angular.module('vendor', [])
-.controller('vendorController', function($scope, $rootScope, $location, $anchorScroll, $http, surveyService, vendorService) {
+.controller('vendorController', function($scope, $rootScope, $location, $anchorScroll, $http, $routeParams, surveyService, vendorService) {
 $rootScope.showCarousel = false
 $scope.validation = true;
 $scope.vendor_page = 0;
@@ -7,30 +7,46 @@ $scope.become_vendor = 1;
 $scope.validate_capture = surveyService.validate_and_capture
 $scope.update_options = surveyService.update_options
 
+$scope.vendor_email_funct = function(){
+vendorService.vendor_email($scope.vendor_email_id).then(function(data){
+
+        $scope.vendor_page = data[0];
+        $scope.validation = data[1];
+        if (data[2]){$scope.shop_info = data[2]}
+
+    });
+}
+
+$scope.vendor_email_id = $routeParams.email
+
+$scope.go_to_vendor = function(){
+$location.path('/vendor');
+}
+
 $scope.questions = [
     {
     'number': 1,
-    'text': 'Indicate the years of experience (practicing/apprentice/training/incorporated) your ideal barber has.',
+    'text': 'Indicate the average years of experience of barbers at this shop.',
     'options':['0-5 years', '6-10 years', '10+ years']},
     {
     'number': 2,
-    'text': 'What is the personality of your ideal barbershop?',
+    'text': 'Highlight the personality of this shop from below.',
     'options':['Loud/fun', 'Family oriented', 'Trendy', 'Down to business']},
     {
     'number': 3,
-    'text': 'Do you prefer an appointment?',
+    'text': 'Are appointments required ath this shop?',
     'options':['Yes', 'No']},
     {
     'number': 4,
-    'text': 'Is a complimentary hot towel and straight razor neck shave important to you?',
+    'text': 'Are complimentary hot towel or straight razor neck shave offered?',
     'options':['Yes', 'No']},
     {
     'number': 5,
-    'text': 'Is a beard trim service important? (Choose no if no beard)',
+    'text': 'Are beard trimming services offered?',
     'options':['Yes', 'No']},
     {
     'number': 6,
-    'text': 'Specify your preferred haircut/style from the images below.',
+    'text': 'Choose the top 3 haircuts your shop performs from the images below.',
     'options':[
     ['1729642-urban-grunge-portrait.jpg', 1],
     ['9377769-hair-styled-man.jpg', 2],
@@ -42,79 +58,34 @@ $scope.questions = [
     ['55326536-sculptural-face-and-mohican-hairstyle.jpg', 8],
     ['58450262-turkish-thoughtful-young-man.jpg', 9],
     ['58954580-i-ve-got-a-reason-to-smile.jpg', 10]
-    ]},
+    ],
+    'answer':{}},
     {
     'number': 7,
-    'text': 'Indicate your preference.',
-    'options':['Male Barber', 'Female Barber']},
+    'text': 'Identify your shop.',
+    'options':['Male Barbers', 'Female Barbers', 'Both']},
     {
     'number': 8,
-    'text': 'Indicate your ideal price range for a haircut.',
+    'text': 'How much is the standard haircut at your shop?',
     'options':['$12 and under', '$13-20', '$21+']},
-    {'number': 9,
-    'text': 'Indicate the proximity you are willing to travel.',
-    'options':['Less than 5 miles', '6 to 15 miles', 'Over 15 miles']},
     {
     'number': 10,
     'text': 'Is the barbers advice on your cut/style significant?',
     'options':['Yes', 'No']},
     {
     'number': 11,
-    'text': 'How many barbers operate at a time in your ideal barbershop?',
-    'options':['2 or less', '3-4', '5+']},
-    {
-    'number': 12,
-    'text': 'How often do you get your haircut?',
-    'options':['Once a month or less', 'More than once a month']},
-    {
-    'number': 13,
-    'text': 'Rank the questions from most important to least important.',
-    'options':[1,2,3,4,5,6,7,8,9,10,11]}
+    'text': 'How many barbers consistently operate at a given time?',
+    'options':['2 or less', '3-4', '5+']}
     ];
 
     $scope.page1 = $scope.questions.slice(0,5);
     $scope.page2 = $scope.questions.slice(5,6);
-    $scope.page3 = $scope.questions.slice(6,12);
+    $scope.page3 = $scope.questions.slice(6,10);
     $scope.page4 = $scope.questions.slice(0,11);
 
 $scope.haircuts = surveyService.shuffle($scope.questions[5]['options']);
 $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), $scope.haircuts.slice(6,9), [$scope.haircuts[9]]];
 
-    $scope.available_options = {};
-
-    for (var q in $scope.page4){
-        $scope.available_options[$scope.page4[q].number] = $scope.questions[12]['options'].slice();
-    }
-
-    $scope.stores = [
-    ['21268029-old-western-town.jpg'],
-    ['6060043-hanging-sign.jpg'],
-    ['55534146-barbershop-shack.jpg']
-    ]
-
-    $scope.stores = surveyService.shuffle($scope.stores);
-
-    $scope.store_matches = [
-    {'name':'Store match 1 name',
-    'address':'Store match 1 address',
-    'key':'Store_match_1_key'},
-    {'name':'Store match 2 name',
-    'address':'Store match 2 address',
-    'key':'Store_match_2_key'},
-    {'name':'Store match 3 name',
-    'address':'Store match 3 address',
-    'key':'Store_match_3_key'}
-    ]
-
-    $scope.stores[0].push($scope.store_matches[0]);
-    $scope.stores[1].push($scope.store_matches[1]);
-    $scope.stores[2].push($scope.store_matches[2]);
-
-    $scope.store_select = function(selected_store){
-    $scope.vendor_page=6;
-    $scope.selected_store = selected_store;
-    $scope.scrollTop();
-    }
 
     $scope.scrollTop = function() {
     $location.hash('top');
@@ -125,7 +96,22 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
 
   $scope.navigate = function(page){
   $scope.validation = $scope.result
-  if ($scope.validation && page == 'admin'){$scope.vendor_page += 1}
+
+  var count = 0;
+var i;
+
+for (i in $scope.questions[5]['answer']) {
+    if ($scope.questions[5]['answer'][i] == true) {
+        count++;
+    }
+}
+console.log(count);
+  if ($scope.vendor_page == 2 && page == 'admin' && count != 3){$scope.validation = false;}
+
+  if ($scope.validation && page == 'admin'){
+  $scope.vendor_page += 1
+  return
+  }
   else if ($scope.validation && page == 'vendor'){$scope.become_vendor += 1}
   $scope.scrollTop();
   }
@@ -136,7 +122,5 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   $scope.return_home=function(){
     $location.path('/home')
     }
-
-    $scope.admin_sign_in = vendorService.admin_sign_in
 
 });

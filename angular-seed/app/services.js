@@ -1,5 +1,5 @@
 angular.module('survey', [])
-.service('surveyService', function($http){
+.service('surveyService', function($http, $q){
 
     this.shuffle = function (array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
@@ -34,27 +34,38 @@ this.update_options = function(question_number, old_value, page4, available_opti
         return available_options;
     };
 
-    this.validate_and_capture = function(section, check_for, questions, post_to){
-
+    this.validate_and_capture = function(section, check_for, questions, post_to, email){
+var deferred = $q.defer();
     var section_questions = [];
   for (var s in section){
     section_questions.push(questions[section[s].number-1]);
 
     if (!questions[section[s].number-1][check_for]){
-        return false;
+       deferred.resolve(false);
+       return deferred.promise;
         }
     else{
         localStorage.setItem("question_"+ s.number, questions[section[s].number-1][check_for]);
         questions[section[s].number-1]['ls_'+check_for]=localStorage.getItem("question_"+ s.number);
     }
   }
-
-  $http.post(post_to, {questions:questions, email:''})
-  return true;
+  console.log(questions);
+ var promise = $http.post(post_to, {questions:questions, email:email}).
+success(function() {
+deferred.resolve(true);
+  }).
+  error(function() {
+deferred.resolve(false);
+  });
+  return deferred.promise;
 
 };
 
-}).service('vendorService', function($http){
+this.find_matches = function(){
+
+};
+
+}).service('vendorService', function($http, $q, $routeParams){
 this.submit_vendor_info = function(vendor_info){
 
   for (var v in vendor_info){
@@ -68,14 +79,17 @@ this.submit_vendor_info = function(vendor_info){
 
 };
 
-this.admin_sign_in = function(){
-$http.get('/admin_sign_in').
-success(function(data, status, headers, config) {
-
+this.vendor_email = function(email){
+var deferred = $q.defer();
+console.log($routeParams);
+var promise = $http.post('/vendor_email', {email: email}).
+success(function(data) {
+deferred.resolve([1,true,data]);
   }).
-  error(function(data, status, headers, config) {
-
+  error(function() {
+deferred.resolve([0,false])
   });
+  return deferred.promise;
 }
 });
 

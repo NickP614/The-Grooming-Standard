@@ -50,8 +50,8 @@ handlers:
 - url: /vendor_info
   script: angular-seed.app.vendor.vendor.app
 
-- url: /admin_sign_in
-  script: angular-seed.app.admin_sign_in.app
+- url: /vendor_email
+  script: angular-seed.app.vendor.vendor_admin.app
 
 libraries:
 - name: webapp2

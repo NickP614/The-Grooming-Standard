@@ -19,11 +19,7 @@ class SubmitVendor(webapp2.RequestHandler):
             email_query.put()
             logging.info(email_query.vendor_dict)
         else:
-            vendor = Vendor()
-            vendor.vendor_dict = questions
-            vendor.vendor_email = email
-            vendor.put()
-            logging.info(vendor.vendor_dict)
+            self.error(404)
 
 
         #self.response.headers['Content-Type'] = 'application/json'

@@ -13,7 +13,7 @@
                 </div>
             <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
             <a class="btn btn-primary btn-lg btn-block"
-               ng-click="result = validate_capture(page1, 'answer', questions, '/submit_survey'); navigate();">Continue</a><br>
+               ng-click="result = validate_capture(page1, 'answer', questions, '/submit_survey', ''); navigate();">Continue</a><br>
             </div>
 
         <div ng-show="survey_page == 2">
@@ -34,7 +34,7 @@
           <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=1; scrollTop()">Back</a><br>
         </div>
         <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page2, 'answer', questions, '/submit_survey'); navigate();">Continue</a><br>
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page2, 'answer', questions, '/submit_survey', ''); navigate();">Continue</a><br>
         </div>
       </div>
 
@@ -57,7 +57,7 @@
           <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=2; scrollTop()">Back</a><br>
         </div>
         <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page3, 'answer', questions, '/submit_survey'); navigate();">Continue</a><br>
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page3, 'answer', questions, '/submit_survey', ''); navigate();">Continue</a><br>
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@
           <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=3; scrollTop()">Back</a><br>
         </div>
         <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page4, 'ranking', questions, '/submit_survey'); navigate();">Continue</a><br>
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page4, 'ranking', questions, '/submit_survey', ''); navigate();">Continue</a><br>
         </div>
       </div>
         </div>

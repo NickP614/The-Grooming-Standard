@@ -2,16 +2,30 @@
 
 <a id="top"></a>
         <div ng-show='vendor_page == 0'>
-            <h1>You must be a TGS admin to view this page click below to sign in.</h1>
-            <a class="btn btn-primary btn-lg btn-block"
-               ng-click="admin_sign_in()">Continue</a><br>
-
+            <h1>The shop must have an email address in the system to enter survey information.</h1>
+            <h3>Enter the email associated with this barber shop below.</h3>
+            <div class="row">
+            <div class="col-md-12">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" ng-model="vendor_email_id" placeholder="Enter email"><br>
+                </div>
+                </div>
+            <div class="alert alert-danger" ng-show="!validation">You can only enter survey info for shops that have contact info. Select <stron>Enter vendor info</stron> to add vendor info.</div>
+             <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-info btn-lg btn-block" ng-click="go_to_vendor()">Enter vendor info</a><br>
         </div>
+        <div class="col-md-6">
+            <a class="btn btn-primary btn-lg btn-block"
+               ng-click="vendor_email_funct()">Continue</a><br>
+</div>
+        </div>
+            </div>
         <div ng-show='vendor_page == 1'>
-            <h1>13 questions away from your custom barber matches!</h1>
+            <h1>Enter Barber Shop info for {{ shop_info.vendor_name }}</h1>
             <div class="row">
         <div class="col-md-6" ng-repeat="question in page1">
-            <label class="form-label">{{ question.number }}.  {{ question.text }}</label>
+            <label class="form-label">{{ question.text }}</label>
           <div class="radio" ng-repeat="option in question.options">
             <label>
               <input type="radio" ng-model="questions[question.number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
@@ -19,39 +33,43 @@
             </div>
                 </div>
             <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
+            <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=0; scrollTop()">Back</a><br>
+        </div>
+        <div class="col-md-6">
             <a class="btn btn-primary btn-lg btn-block"
-               ng-click="result = validate_capture(page1, 'answer', questions, '/submit_vendor'); navigate('admin');">Continue</a><br>
+               ng-click="result = validate_capture(page1, 'answer', questions, '/submit_vendor', vendor_email_id); navigate('admin');">Continue</a><br>
             </div>
-
+                </div>
+</div>
         <div ng-show="vendor_page == 2">
-<h1>8 questions away from your custom barber matches!</h1>
-    <h3>6. Specify your preferred haircut/style from the images below.</h3>
+<h1>Enter Barber Shop info for {{ shop_info.vendor_name }}</h1>
+    <h3>Choose the top 3 haircuts this shop preforms from the images below.</h3>
     <div class="row" ng-repeat="row in haircuts_list">
          <div class="col-md-4" ng-repeat="haircut in row">
 <img src="TGS-stock_photos/stock-photo-{{haircut[0]}}" width="200" height="200" overflow = "hidden">
-             <div class="radio">
             <label>
-              <input type="radio" ng-model="questions[5]['answer']" ng-value="haircut[1]">Select this style</label>
-          </div>
+              <input type="checkbox" ng-model="questions[5]['answer'][haircut[1]]"> Select this style</label>
              </div>
-        </div>
-<div class="alert alert-danger" ng-show="!validation">Please select a hairstyle to continue!</div>
+        </div><br>
+<div class="alert alert-danger" ng-show="!validation">Select exactly 3 images to continue.</div>
       <div class="row">
         <div class="col-md-6">
           <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=1; scrollTop()">Back</a><br>
         </div>
         <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page2, 'answer', questions, '/submit_vendor'); navigate('admin');">Continue</a><br>
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page2, 'answer', questions, '/submit_vendor', vendor_email_id); navigate('admin');">Continue</a><br>
         </div>
       </div>
 
 </div>
 
         <div ng-show='vendor_page == 3'>
-            <h1>7 questions away from your custom barber matches!</h1>
+            <h1>Enter Barber Shop info for {{ shop_info.vendor_name }}</h1>
       <div class="row">
         <div class="col-md-6" ng-repeat="question in page3">
-            <label class="form-label">{{ question.number }}.  {{ question.text }}</label>
+            <label class="form-label">{{ question.text }}</label>
           <div class="radio" ng-repeat="option in question.options">
             <label>
               <input type="radio" ng-model="questions[question.number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
@@ -64,8 +82,20 @@
           <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=2; scrollTop()">Back</a><br>
         </div>
         <div class="col-md-6">
-          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page3, 'answer', questions, '/submit_vendor'); navigate('admin');">Continue</a><br>
+          <a class="btn btn-primary btn-lg btn-block" ng-click="result = validate_capture(page3, 'answer', questions, '/submit_vendor', vendor_email_id); navigate('admin');">Continue</a><br>
         </div>
+      </div>
+    </div>
+
+        <div ng-show='vendor_page == 4'>
+            <h1>Barber Shop survey for {{ shop_info.vendor_name }} complete!</h1><br>
+
+                     <div class="row">
+                         <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
+        <div class="col-md-12">
+          <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=0; scrollTop()">Back to vendor survey start</a><br>
+        </div>
+
       </div>
     </div>
 
