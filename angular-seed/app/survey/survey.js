@@ -127,7 +127,7 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   if ($scope.validation){$scope.survey_page += 1}
   if ($scope.survey_page == 5){
   $scope.loading = true;
-  surveyService.find_matches();
+  surveyService.find_matches($scope.questions);
 
   }
 

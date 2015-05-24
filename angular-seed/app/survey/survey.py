@@ -3,6 +3,7 @@ import logging
 import json
 import cgi
 from ..models import Survey
+from ..models import Vendor
 
 class SubmitSurvey(webapp2.RequestHandler):
     def post(self):
@@ -40,6 +41,25 @@ class SubmitSurvey(webapp2.RequestHandler):
         #self.response.headers['Content-Type'] = 'application/json'
         #self.response.out.write(json.dumps(data))
 
+class FindMatches(webapp2.RequestHandler):
+    def post(self):
+        data = json.loads(self.request.body)
+        questions = data['questions']
+
+        return_shops = []
+
+        match_query = Vendor.query()
+
+        
+
+        #for m in match_query:
+            #for question in m.vendor_dict:
+
+
+        #self.response.headers['Content-Type'] = 'application/json'
+        #self.response.out.write(json.dumps(data))
+
 app = webapp2.WSGIApplication([
-    ('/submit_survey', SubmitSurvey)
+    ('/submit_survey', SubmitSurvey),
+    ('/find_matches', FindMatches)
 ], debug=True)

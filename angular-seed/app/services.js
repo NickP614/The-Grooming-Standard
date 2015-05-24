@@ -61,7 +61,18 @@ deferred.resolve(false);
 
 };
 
-this.find_matches = function(){
+this.find_matches = function(questions){
+
+var deferred = $q.defer();
+console.log($routeParams);
+var promise = $http.post('/find_matches').
+success(function(data) {
+deferred.resolve(data);
+  }).
+  error(function() {
+deferred.resolve(false)
+  });
+  return deferred.promise;
 
 };
 
