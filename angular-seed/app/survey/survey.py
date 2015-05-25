@@ -46,14 +46,21 @@ class FindMatches(webapp2.RequestHandler):
         data = json.loads(self.request.body)
         questions = data['questions']
 
+        questions_dict = {}
+
+        for q in questions:
+            questions_dict[q['number']] = q
+
         return_shops = []
 
         match_query = Vendor.query()
 
-        
-
-        #for m in match_query:
-            #for question in m.vendor_dict:
+        for m in match_query:
+            for q in m.vendor_dict:
+                answer = questions_dict.get(q['number'])
+                logging.info(q)
+                if q['answer'] and answer['answer'] and q['answer'] == answer['answer']:
+                    logging.info(answer['ranking'])
 
 
         #self.response.headers['Content-Type'] = 'application/json'

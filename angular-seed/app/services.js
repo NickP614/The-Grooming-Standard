@@ -41,8 +41,8 @@ var deferred = $q.defer();
     section_questions.push(questions[section[s].number-1]);
 
     if (!questions[section[s].number-1][check_for]){
-       deferred.resolve(false);
-       return deferred.promise;
+
+       return false;
         }
     else{
         localStorage.setItem("question_"+ s.number, questions[section[s].number-1][check_for]);
@@ -64,8 +64,7 @@ deferred.resolve(false);
 this.find_matches = function(questions){
 
 var deferred = $q.defer();
-console.log($routeParams);
-var promise = $http.post('/find_matches').
+var promise = $http.post('/find_matches',{questions:questions}).
 success(function(data) {
 deferred.resolve(data);
   }).
@@ -92,7 +91,6 @@ this.submit_vendor_info = function(vendor_info){
 
 this.vendor_email = function(email){
 var deferred = $q.defer();
-console.log($routeParams);
 var promise = $http.post('/vendor_email', {email: email}).
 success(function(data) {
 deferred.resolve([1,true,data]);

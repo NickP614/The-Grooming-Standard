@@ -68,6 +68,10 @@ $scope.questions = [
     'number': 8,
     'text': 'How much is the standard haircut at your shop?',
     'options':['$12 and under', '$13-20', '$21+']},
+    {'number': 9,
+    'text': 'Indicate the proximity you are willing to travel.',
+    'options':['Less than 5 miles', '6 to 15 miles', 'Over 15 miles'],
+    'answer':1},
     {
     'number': 10,
     'text': 'Is the barbers advice on your cut/style significant?',
@@ -80,7 +84,8 @@ $scope.questions = [
 
     $scope.page1 = $scope.questions.slice(0,5);
     $scope.page2 = $scope.questions.slice(5,6);
-    $scope.page3 = $scope.questions.slice(6,10);
+    $scope.page3 = $scope.questions.slice(6,11);
+    $scope.page3.splice(2, 1);
     $scope.page4 = $scope.questions.slice(0,11);
 
 $scope.haircuts = surveyService.shuffle($scope.questions[5]['options']);
