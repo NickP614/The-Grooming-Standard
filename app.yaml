@@ -56,6 +56,9 @@ handlers:
 - url: /find_matches
   script: angular-seed.app.survey.survey.app
 
+- url: /selected_shop
+  script: angular-seed.app.survey.survey.app
+
 
 libraries:
 - name: webapp2

@@ -75,7 +75,7 @@
                 <tr ng-repeat="question in page4">
                     <td>{{ question.text }}</td>
                     <td>
-                        <select data-ng-model="questions[question.number-1]['ranking']" ng-options="number for number in available_options[question.number]" ng-change="available_options = update_options(question.number, '{{questions[question.number-1]['ranking']}}', page4, available_options, questions)"></select>
+                        <select data-ng-model="questions[$index]['ranking']" ng-options="number for number in available_options[question.number]" ng-change="available_options = update_options(question.number, '{{questions[$index]['ranking']}}', page4, available_options, questions)"></select>
                     </td>
                 </tr>
 
@@ -93,13 +93,16 @@
 
                 <div ng-show='survey_page == 5'>
       <h1>Here Are Your Custom Barbershop Matches!</h1>
-<h2>Let Us Know Which Shop You Choose</h2>
+<h2>Let Us Know Which Shop You Choose</h2><br>
             <div class="row">
-        <div class="col-md-4" ng-repeat="store in stores">
-<img src="TGS-stock_photos/stock-photo-{{store[0]}}" width="200" height="200" overflow = "hidden"><br>
-             {{ store[1]['name'] }}<br>
-             {{ store[1]['address'] }}<br>
-                <a class="btn btn-lg btn-block btn-success" ng-click="store_select(store)">I choose this shop!</a><br><br>
+        <div class="col-md-4" ng-repeat="shop in shops">
+            <h3># {{ $index +1  }} Match</h3><br>
+<img src="TGS-stock_photos/stock-photo-{{shop[0]}}" width="200" height="200" overflow = "hidden"><br><br>
+
+             {{ shop[1]['vendor_name'] }}<br>
+             {{ shop[1]['vendor_address'] }}<br>
+             {{ shop[1]['vendor_website'] }}<br><br>
+                <a class="btn btn-lg btn-block btn-success" ng-click="shop_select(shop)">I choose this shop!</a><br><br>
              </div>
                 </div>
                 <div class="row">
@@ -112,12 +115,13 @@
 
         <div ng-show='survey_page == 6'>
       <h1>Thanks for choosing The Grooming Standard!</h1>
-<h2>Here is your selected store</h2>
+<h2>Here is your selected barber shop!</h2><br>
             <div class="row">
         <div class="col-md-12">
-<img src="TGS-stock_photos/stock-photo-{{selected_store[0]}}" width="200" height="200" overflow = "hidden"><br>
-             {{ selected_store[1]['name'] }}<br>
-             {{ selected_store[1]['address'] }}<br>
+<img src="TGS-stock_photos/stock-photo-{{selected_shop[0]}}" width="200" height="200" overflow = "hidden"><br><br>
+             {{ selected_shop[1]['vendor_name'] }}<br>
+             {{ selected_shop[1]['vendor_address'] }}<br>
+             {{ selected_shop[1]['vendor_website'] }}<br>
                 <br>
              </div>
                 </div>

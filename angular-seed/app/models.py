@@ -6,6 +6,10 @@ class Survey(ndb.Model):
     survey_ip = ndb.StringProperty()
     survey_email = ndb.StringProperty()
     survey_hash = ndb.StringProperty()
+    shop_rankings = ndb.PickleProperty()
+    shop_rankings_email = ndb.StringProperty(repeated=True)
+    selected_shop = ndb.PickleProperty()
+    selected_shop_email = ndb.StringProperty()
     date = ndb.DateTimeProperty(auto_now_add=True)
 
 class Vendor(ndb.Model):

@@ -61,11 +61,12 @@ deferred.resolve(false);
 
 };
 
-this.find_matches = function(questions){
+this.find_matches = function(questions, email){
 
 var deferred = $q.defer();
-var promise = $http.post('/find_matches',{questions:questions}).
+var promise = $http.post('/find_matches',{questions:questions, email:email}).
 success(function(data) {
+
 deferred.resolve(data);
   }).
   error(function() {

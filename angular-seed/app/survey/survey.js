@@ -85,33 +85,19 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
         $scope.available_options[$scope.page4[q].number] = $scope.questions[12]['options'].slice();
     }
 
-    $scope.stores = [
+    $scope.shops = [
     ['21268029-old-western-town.jpg'],
     ['6060043-hanging-sign.jpg'],
     ['55534146-barbershop-shack.jpg']
     ]
 
-    $scope.stores = surveyService.shuffle($scope.stores);
+    $scope.shops = surveyService.shuffle($scope.shops);
 
-    $scope.store_matches = [
-    {'name':'Store match 1 name',
-    'address':'Store match 1 address',
-    'key':'Store_match_1_key'},
-    {'name':'Store match 2 name',
-    'address':'Store match 2 address',
-    'key':'Store_match_2_key'},
-    {'name':'Store match 3 name',
-    'address':'Store match 3 address',
-    'key':'Store_match_3_key'}
-    ]
-
-    $scope.stores[0].push($scope.store_matches[0]);
-    $scope.stores[1].push($scope.store_matches[1]);
-    $scope.stores[2].push($scope.store_matches[2]);
-
-    $scope.store_select = function(selected_store){
+    $scope.shop_select = function(selected_shop){
+    $scope.selected_shop = selected_shop;
     $scope.survey_page=6;
-    $scope.selected_store = selected_store;
+    $http.post('/selected_shop',{selected_shop:selected_shop, email:''})
+
     $scope.scrollTop();
     }
 
@@ -127,7 +113,14 @@ $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), 
   if ($scope.validation){$scope.survey_page += 1}
   if ($scope.survey_page == 5){
   $scope.loading = true;
-  surveyService.find_matches($scope.questions);
+  surveyService.find_matches($scope.questions, '').then(function(shop_matches){
+
+  $scope.shops[0].push(shop_matches[0]);
+  $scope.shops[1].push(shop_matches[1]);
+  $scope.shops[2].push(shop_matches[2]);
+
+  console.log($scope.shops)
+  });
 
   }
 
