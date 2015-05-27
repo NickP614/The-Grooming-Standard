@@ -67,17 +67,27 @@
 
         <div ng-show='vendor_page == 3'>
             <h1>Enter Barber Shop info for {{ shop_info.vendor_name }}</h1>
-      <div class="row">
-        <div class="col-md-6" ng-repeat="question in page3">
+
+        <div ng-repeat="question in page3" ng-init="parent_index = $index">
+            <div class="row" ng-if="$even">
+            <div class="col-md-6">
             <label class="form-label">{{ question.text }}</label>
           <div class="radio" ng-repeat="option in question.options">
             <label>
               <input type="radio" ng-model="questions[question.number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
           </div>
             </div>
-                </div>
-                     <div class="row">
-                         <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
+
+                <div class="col-md-6">
+            <label class="form-label">{{ page3[parent_index + 1].number }}.  {{ page3[parent_index + 1].text }}</label>
+          <div class="radio" ng-repeat="option in page3[parent_index + 1].options">
+            <label>
+              <input type="radio" ng-model="questions[page3[parent_index + 1].number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
+          </div>
+            </div>
+</div>
+        </div>
+
         <div class="col-md-6">
           <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=2; scrollTop()">Back</a><br>
         </div>

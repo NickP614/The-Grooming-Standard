@@ -7,9 +7,9 @@
             <div class="row">
         <div class="col-md-6" ng-repeat="info in vendor_info">
             <label class="form-label">{{ info[0] }}</label>
-            <input ng-if="$index != 2 && $index!= 4" type="text" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
-            <input ng-if="$index == 2" type="number" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
-            <input ng-if="$index == 4" type="email" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <input  type="text" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <!--<input ng-if="$index == 2" type="number" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">
+            <input ng-if="$index == 4" type="email" class="form-control" ng-model="info[1]" placeholder="Enter {{info[0]}}">-->
             <br>
             </div>
                 </div>

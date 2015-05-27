@@ -59,4 +59,10 @@ $rootScope.showCarousel = true
     $location.path('/vendor')
     }
 
+})
+.controller('tgsController', function($scope, $rootScope, $location) {
+$rootScope.showCarousel = false
+})
+.controller('blogController', function($scope, $rootScope, $location) {
+$rootScope.showCarousel = false
 });
