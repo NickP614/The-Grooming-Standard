@@ -121,7 +121,7 @@ console.log(count);
   $scope.scrollTop();
   }
 
-  $scope.vendor_info = [['Barbershop Name'], ['Address'], ['Phone'], ['Contact Name'], ['Email'], ['Website']];
+  $scope.vendor_info = [['Barbershop Name'], ['Address (Street, City, State, and Zip)'], ['Phone'], ['Contact Name'], ['Email'], ['Website']];
   $scope.submit_vendor_info = vendorService.submit_vendor_info
 
   $scope.return_home=function(){

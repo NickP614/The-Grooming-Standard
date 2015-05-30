@@ -66,45 +66,14 @@ class FindMatches(webapp2.RequestHandler):
 
         for m in match_query:
             score = 0
-            for q in m.vendor_dict:
-                answer = questions_dict.get(q['number'])
+            if m.vendor_dict:
+                for q in m.vendor_dict:
+                    answer = questions_dict.get(q['number'])
 
-                if answer['number'] != 6 and q['answer'] and answer['answer'] and q['answer'] == answer['answer']:
+                    if answer['number'] != 6 and q['answer'] and answer['answer'] and q['answer'] == answer['answer']:
 
-                    if answer['ranking'] == 1:
-                            points = 11
-                    elif answer['ranking'] == 2:
-                        points = 10
-                    elif answer['ranking'] == 3:
-                        points = 9
-                    elif answer['ranking'] == 4:
-                        points = 8
-                    elif answer['ranking'] == 5:
-                        points = 7
-                    elif answer['ranking'] == 6:
-                        points = 6
-                    elif answer['ranking'] == 7:
-                        points = 5
-                    elif answer['ranking'] == 8:
-                        points = 4
-                    elif answer['ranking'] == 9:
-                        points = 3
-                    elif answer['ranking'] == 10:
-                        points = 2
-                    elif answer['ranking'] == 11:
-                        points = 1
-
-                    score += points
-
-                elif answer['number'] == 6 and q['answer'] and answer['answer']:
-                    portrait_list = []
-                    for k,v in q['answer'].iteritems():
-                        if v == True:
-                            portrait_list.append(k)
-
-                    if str(answer['answer']) in portrait_list:
                         if answer['ranking'] == 1:
-                            points = 11
+                                points = 11
                         elif answer['ranking'] == 2:
                             points = 10
                         elif answer['ranking'] == 3:
@@ -125,7 +94,39 @@ class FindMatches(webapp2.RequestHandler):
                             points = 2
                         elif answer['ranking'] == 11:
                             points = 1
+
                         score += points
+
+                    elif answer['number'] == 6 and q['answer'] and answer['answer']:
+                        portrait_list = []
+                        for k,v in q['answer'].iteritems():
+                            if v == True:
+                                portrait_list.append(k)
+
+                        if str(answer['answer']) in portrait_list:
+                            if answer['ranking'] == 1:
+                                points = 11
+                            elif answer['ranking'] == 2:
+                                points = 10
+                            elif answer['ranking'] == 3:
+                                points = 9
+                            elif answer['ranking'] == 4:
+                                points = 8
+                            elif answer['ranking'] == 5:
+                                points = 7
+                            elif answer['ranking'] == 6:
+                                points = 6
+                            elif answer['ranking'] == 7:
+                                points = 5
+                            elif answer['ranking'] == 8:
+                                points = 4
+                            elif answer['ranking'] == 9:
+                                points = 3
+                            elif answer['ranking'] == 10:
+                                points = 2
+                            elif answer['ranking'] == 11:
+                                points = 1
+                            score += points
 
             if len(score_list) >= 3:
 

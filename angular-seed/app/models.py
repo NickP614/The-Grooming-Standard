@@ -18,7 +18,7 @@ class Vendor(ndb.Model):
     vendor_hash = ndb.StringProperty()
     vendor_name = ndb.StringProperty()
     vendor_address = ndb.StringProperty()
-    vendor_phone = ndb.IntegerProperty()
+    vendor_phone = ndb.StringProperty()
     vendor_contact = ndb.StringProperty()
     vendor_website = ndb.StringProperty()
     date = ndb.DateTimeProperty(auto_now_add=True)

@@ -65,4 +65,7 @@ $rootScope.showCarousel = false
 })
 .controller('blogController', function($scope, $rootScope, $location) {
 $rootScope.showCarousel = false
+})
+.controller('contactController', function($scope, $rootScope, $location) {
+$rootScope.showCarousel = false
 });

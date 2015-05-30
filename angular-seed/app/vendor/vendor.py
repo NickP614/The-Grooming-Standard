@@ -63,7 +63,7 @@ class VendorInfo(webapp2.RequestHandler):
             + "Click this link to complete the vendor survey for this shop \n \
             grooming-standard-dev.appspot.com/#/admin?email=" + cgi.escape(vendor_data[4][1]).lower()
 
-        mail.send_mail('nick.patterson2@gmail.com', 'nick.patterson2@gmail.com', subject, body)
+        mail.send_mail('thegroomingstandard@gmail.com', 'thegroomingstandard@gmail.com', subject, body)
 
 
         #self.response.headers['Content-Type'] = 'application/json'
