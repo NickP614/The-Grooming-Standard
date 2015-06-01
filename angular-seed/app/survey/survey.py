@@ -73,26 +73,28 @@ class FindMatches(webapp2.RequestHandler):
                     if answer['number'] != 6 and q['answer'] and answer['answer'] and q['answer'] == answer['answer']:
 
                         if answer['ranking'] == 1:
-                                points = 11
+                                points = 12
                         elif answer['ranking'] == 2:
-                            points = 10
+                            points = 11
                         elif answer['ranking'] == 3:
-                            points = 9
+                            points = 10
                         elif answer['ranking'] == 4:
-                            points = 8
+                            points = 9
                         elif answer['ranking'] == 5:
-                            points = 7
+                            points = 8
                         elif answer['ranking'] == 6:
-                            points = 6
+                            points = 7
                         elif answer['ranking'] == 7:
-                            points = 5
+                            points = 6
                         elif answer['ranking'] == 8:
-                            points = 4
+                            points = 5
                         elif answer['ranking'] == 9:
-                            points = 3
+                            points = 4
                         elif answer['ranking'] == 10:
-                            points = 2
+                            points = 3
                         elif answer['ranking'] == 11:
+                            points = 2
+                        elif answer['ranking'] == 12:
                             points = 1
 
                         score += points
@@ -105,26 +107,28 @@ class FindMatches(webapp2.RequestHandler):
 
                         if str(answer['answer']) in portrait_list:
                             if answer['ranking'] == 1:
-                                points = 11
+                                points = 12
                             elif answer['ranking'] == 2:
-                                points = 10
+                                points = 11
                             elif answer['ranking'] == 3:
-                                points = 9
+                                points = 10
                             elif answer['ranking'] == 4:
-                                points = 8
+                                points = 9
                             elif answer['ranking'] == 5:
-                                points = 7
+                                points = 8
                             elif answer['ranking'] == 6:
-                                points = 6
+                                points = 7
                             elif answer['ranking'] == 7:
-                                points = 5
+                                points = 6
                             elif answer['ranking'] == 8:
-                                points = 4
+                                points = 5
                             elif answer['ranking'] == 9:
-                                points = 3
+                                points = 4
                             elif answer['ranking'] == 10:
-                                points = 2
+                                points = 3
                             elif answer['ranking'] == 11:
+                                points = 2
+                            elif answer['ranking'] == 12:
                                 points = 1
                             score += points
 
@@ -171,6 +175,14 @@ class FindMatches(webapp2.RequestHandler):
         logging.info(shop_list)
         logging.info(score_list)
 
+        score1= 100 * float(score_list[0])/float(78)
+        score2= 100 * float(score_list[1])/float(78)
+        score3= 100 * float(score_list[2])/float(78)
+
+        shop_list[0]['score'] = int(score1)
+        shop_list[1]['score'] = int(score2)
+        shop_list[2]['score'] = int(score3)
+
         if email and email_query.get():
             email_query = email_query.get()
             email_query.shop_rankings = shop_list
@@ -188,6 +200,8 @@ class FindMatches(webapp2.RequestHandler):
                 shop_rankings_email.append(s['vendor_email'])
             ip_query.shop_rankings_email = shop_rankings_email
             ip_query.put()
+
+
 
         self.response.headers['Content-Type'] = 'application/json'
         self.response.out.write(json.dumps(shop_list))

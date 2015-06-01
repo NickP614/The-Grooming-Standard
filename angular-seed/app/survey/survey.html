@@ -74,24 +74,44 @@
     </div>
 
         <div ng-show='survey_page == 4'>
+
 <h1>1 question away from your custom barber matches!</h1>
             <h3>13. Rank the questions from most important to least important</h3>
             <p class="help-block">1 = Most important, 11 = Least important.</p>
-            <table style="width:75%">
+            <table style="width:75%" cellpadding="25">
                 <tr>
-                    <th>Question</th>
-                    <th>Ranking</th>
+                    <th  align="left">Question</th>
+                    <th  align="center">Your answer</th>
+                    <th align="right">Ranking</th>
+
                 </tr>
 
-                <tr ng-repeat="question in page4">
-                    <td>{{ question.text }}</td>
-                    <td>
+                <tr ng-repeat="question in page4" ng-class-even="'even'">
+                    <td align="left" ng-if="$odd">{{ question.rank_text }}</td>
+                    <td ng-if="$odd && $index!=5" align="center">{{ question.options[question.answer -1] }}</td>
+
+                    <td ng-if="$odd && $index==5" align="center"><img src="TGS-stock_photos/stock-photo-{{ question.options[question.answer -1][0] }}" width="100" height="100" overflow = "hidden"></td>
+                    <td align="right" ng-if="$odd">
+                        <select data-ng-model="questions[$index]['ranking']" ng-options="number for number in available_options[question.number]" ng-change="available_options = update_options(question.number, '{{questions[$index]['ranking']}}', page4, available_options, questions)"></select>
+                    </td>
+
+                    <td align="left" ng-if="$even" style="background-color:#FF9999;">{{ question.rank_text }}</td>
+                    <td ng-if="$even && $index!=5" align="center" style="background-color:#FF9999;">{{ question.options[question.answer -1] }}</td>
+
+                    <td ng-if="$even && $index==5" align="center" style="background-color:#FF9999;"><img src="TGS-stock_photos/stock-photo-{{ question.options[question.answer -1][0] }}" width="100" height="100" overflow = "hidden"></td>
+                    <td align="right" ng-if="$even" style="background-color:#FF9999;">
                         <select data-ng-model="questions[$index]['ranking']" ng-options="number for number in available_options[question.number]" ng-change="available_options = update_options(question.number, '{{questions[$index]['ranking']}}', page4, available_options, questions)"></select>
                     </td>
                 </tr>
 
             </table><br>
 <div class="alert alert-danger" ng-show="!validation">Please rank all questions to continue!</div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><a class="btn btn-default btn-lg btn-block" ng-click="clear_selections()">Clear selections</a></div>
+                <div class="col-md-3"></div>
+
+            </div><br>
         <div class="row">
         <div class="col-md-6">
           <a class="btn btn-info btn-lg btn-block" ng-click="survey_page=3; scrollTop()">Back</a><br>
@@ -108,6 +128,7 @@
             <div class="row">
         <div class="col-md-4" ng-repeat="shop in shops">
             <h3># {{ $index +1  }} Match</h3><br>
+            <h2>Score: {{ shop[1]['score']  }}/100 Match</h2><br>
 <img src="TGS-stock_photos/stock-photo-{{shop[0]}}" width="200" height="200" overflow = "hidden"><br><br>
 
              {{ shop[1]['vendor_name'] }}<br>

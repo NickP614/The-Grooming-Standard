@@ -79,14 +79,18 @@ $scope.questions = [
     {
     'number': 11,
     'text': 'How many barbers consistently operate at a given time?',
-    'options':['2 or less', '3-4', '5+']}
+    'options':['2 or less', '3-4', '5+']},
+    {
+    'number': 12,
+    'text': 'How often do you recommend a haircut?',
+    'options':['Once a month or less', 'More than once a month']}
     ];
 
     $scope.page1 = $scope.questions.slice(0,5);
     $scope.page2 = $scope.questions.slice(5,6);
-    $scope.page3 = $scope.questions.slice(6,11);
+    $scope.page3 = $scope.questions.slice(6,12);
     $scope.page3.splice(2, 1);
-    $scope.page4 = $scope.questions.slice(0,11);
+    $scope.page4 = $scope.questions.slice(0,12);
 
 $scope.haircuts = surveyService.shuffle($scope.questions[5]['options']);
 $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), $scope.haircuts.slice(6,9), [$scope.haircuts[9]]];

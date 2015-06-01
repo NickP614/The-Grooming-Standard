@@ -79,7 +79,7 @@
             </div>
 
                 <div class="col-md-6">
-            <label class="form-label">{{ page3[parent_index + 1].number }}.  {{ page3[parent_index + 1].text }}</label>
+            <label class="form-label">{{ page3[parent_index + 1].text }}</label>
           <div class="radio" ng-repeat="option in page3[parent_index + 1].options">
             <label>
               <input type="radio" ng-model="questions[page3[parent_index + 1].number -1]['answer']" ng-value="$index + 1">{{ option }}</label>
@@ -101,7 +101,6 @@
             <h1>Barber Shop survey for {{ shop_info.vendor_name }} complete!</h1><br>
 
                      <div class="row">
-                         <div class="alert alert-danger" ng-show="!validation">Please answer all questions to continue!</div>
         <div class="col-md-12">
           <a class="btn btn-info btn-lg btn-block" ng-click="vendor_page=0; scrollTop()">Back to vendor survey start</a><br>
         </div>

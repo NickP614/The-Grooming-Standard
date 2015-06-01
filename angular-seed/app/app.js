@@ -21,7 +21,7 @@ angular.module('tgs', ['survey', 'vendor', 'ngRoute'])
             controller  : 'vendorController'
         })
 
-        .when('/admin', {
+        .when('/vendor_survey', {
             templateUrl : 'vendor/vendor_admin.html',
             controller  : 'vendorController'
         })

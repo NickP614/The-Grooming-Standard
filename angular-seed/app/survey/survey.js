@@ -10,26 +10,32 @@ $scope.questions = [
     {
     'number': 1,
     'text': 'Indicate the years of experience (practicing/apprentice/training/incorporated) your ideal barber has.',
+    'rank_text': 'Years of experience of your ideal barber.',
     'options':['0-5 years', '6-10 years', '10+ years']},
     {
     'number': 2,
     'text': 'What is the personality of your ideal barbershop?',
+    'rank_text': 'Barbershop personality',
     'options':['Loud/fun', 'Family oriented', 'Trendy', 'Down to business']},
     {
     'number': 3,
     'text': 'Do you prefer an appointment?',
+    'rank_text': 'Do you prefer an appointment?',
     'options':['Yes', 'No']},
     {
     'number': 4,
     'text': 'Is a complimentary hot towel and straight razor neck shave important to you?',
+    'rank_text': 'Is a complimentary hot towel and straight razor neck shave important to you?',
     'options':['Yes', 'No']},
     {
     'number': 5,
     'text': 'Is a beard trim service important? (Choose no if no beard)',
+    'rank_text': 'Is a beard trim service important?',
     'options':['Yes', 'No']},
     {
     'number': 6,
     'text': 'Specify your preferred haircut/style from the images below.',
+    'rank_text': 'Selected haircut/style.',
     'options':[
     ['1729642-urban-grunge-portrait.jpg', 1],
     ['9377769-hair-styled-man.jpg', 2],
@@ -45,39 +51,55 @@ $scope.questions = [
     {
     'number': 7,
     'text': 'Indicate your preference.',
+    'rank_text': 'Do you prefer a male or female barber?',
     'options':['Male Barber', 'Female Barber']},
     {
     'number': 8,
     'text': 'Indicate your ideal price range for a haircut.',
+    'rank_text': 'Indicate your ideal price range for a haircut.',
     'options':['$12 and under', '$13-20', '$21+']},
     {'number': 9,
     'text': 'Indicate the proximity you are willing to travel.',
+    'rank_text': 'Travel distance.',
     'options':['Less than 5 miles', '6 to 15 miles', 'Over 15 miles']},
     {
     'number': 10,
     'text': 'Is the barbers advice on your cut/style significant?',
+    'rank_text': 'Is the barbers advice on your cut/style significant?',
     'options':['Yes', 'No']},
     {
     'number': 11,
     'text': 'How many barbers operate at a time in your ideal barbershop?',
+    'rank_text': 'How many barbers operate at a time in your ideal barbershop?',
     'options':['2 or less', '3-4', '5+']},
     {
     'number': 12,
     'text': 'How often do you get your haircut?',
+    'rank_text': 'How often do you get your haircut?',
     'options':['Once a month or less', 'More than once a month']},
     {
     'number': 13,
     'text': 'Rank the questions from most important to least important.',
-    'options':[1,2,3,4,5,6,7,8,9,10,11]}
+    'options':[1,2,3,4,5,6,7,8,9,10,11,12]}
     ];
 
     $scope.page1 = $scope.questions.slice(0,5);
     $scope.page2 = $scope.questions.slice(5,6);
     $scope.page3 = $scope.questions.slice(6,12);
-    $scope.page4 = $scope.questions.slice(0,11);
+    $scope.page4 = $scope.questions.slice(0,12);
 
 $scope.haircuts = surveyService.shuffle($scope.questions[5]['options']);
 $scope.haircuts_list = [$scope.haircuts.slice(0,3), $scope.haircuts.slice(3,6), $scope.haircuts.slice(6,9), [$scope.haircuts[9]]];
+
+$scope.clear_selections = function() {
+for (var q in $scope.page4){
+        delete $scope.page4[q].ranking
+    }
+
+    for (a in $scope.available_options){
+        $scope.available_options[a] = $scope.questions[12]['options'].slice();
+    }
+}
 
     $scope.available_options = {};
 

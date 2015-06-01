@@ -28,3 +28,7 @@
   content: "";
   padding: 0;
 }
+
+.even {
+  background-color: #FF9999;
+}
