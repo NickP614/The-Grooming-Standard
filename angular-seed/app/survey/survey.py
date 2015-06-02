@@ -65,15 +65,17 @@ class FindMatches(webapp2.RequestHandler):
         score_list = []
 
         for m in match_query:
+            logging.info(m.vendor_email)
             score = 0
             if m.vendor_dict:
+                logging.info(m.vendor_dict)
                 for q in m.vendor_dict:
                     answer = questions_dict.get(q['number'])
 
                     if answer['number'] != 6 and q['answer'] and answer['answer'] and q['answer'] == answer['answer']:
 
                         if answer['ranking'] == 1:
-                                points = 12
+                            points = 12
                         elif answer['ranking'] == 2:
                             points = 11
                         elif answer['ranking'] == 3:
@@ -132,28 +134,28 @@ class FindMatches(webapp2.RequestHandler):
                                 points = 1
                             score += points
 
-            if len(score_list) >= 3:
+                if len(score_list) >= 3:
 
-                if score_list[2] > score_list[1]:
-                    score_list[1], score_list[2] = score_list[2], score_list[1]
-                    shop_list[1], shop_list[2] = shop_list[2], shop_list[1]
-                if score_list[1] > score_list[0]:
-                    score_list[0], score_list[1] = score_list[1], score_list[0]
-                    shop_list[0], shop_list[1] = shop_list[1], shop_list[0]
-                if score_list[2] > score_list[1]:
-                    score_list[1], score_list[2] = score_list[2], score_list[1]
-                    shop_list[1], shop_list[2] = shop_list[2], shop_list[1]
+                    if score_list[2] > score_list[1]:
+                        score_list[1], score_list[2] = score_list[2], score_list[1]
+                        shop_list[1], shop_list[2] = shop_list[2], shop_list[1]
+                    if score_list[1] > score_list[0]:
+                        score_list[0], score_list[1] = score_list[1], score_list[0]
+                        shop_list[0], shop_list[1] = shop_list[1], shop_list[0]
+                    if score_list[2] > score_list[1]:
+                        score_list[1], score_list[2] = score_list[2], score_list[1]
+                        shop_list[1], shop_list[2] = shop_list[2], shop_list[1]
 
-                if score > score_list[2]:
-                    del score_list[2]
-                    del shop_list[2]
+                    if score > score_list[2]:
+                        del score_list[2]
+                        del shop_list[2]
 
+                        score_list.append(score)
+                        shop_list.append(m.to_dict())
+                        break
+                else:
                     score_list.append(score)
                     shop_list.append(m.to_dict())
-                    break
-            else:
-                score_list.append(score)
-                shop_list.append(m.to_dict())
 
         for shop in shop_list:
             del shop['date']

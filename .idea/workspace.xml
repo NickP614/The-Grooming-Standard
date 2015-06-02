@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21af82ba-8879-49a8-a177-8a16a25b8c67" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-49328610-cheerful-young-man-portrait.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-49328610-cheerful-young-man-portrait.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/app.css" afterPath="$PROJECT_DIR$/angular-seed/app/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/app.js" afterPath="$PROJECT_DIR$/angular-seed/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/appengine-angular-seed-python.iml" afterPath="$PROJECT_DIR$/.idea/appengine-angular-seed-python.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/partials/contact.html" afterPath="$PROJECT_DIR$/angular-seed/app/partials/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/index.html" afterPath="$PROJECT_DIR$/angular-seed/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-15414914-african-man-portrait.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-15414914-african-man-portrait.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-1729642-urban-grunge-portrait.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-1729642-urban-grunge-portrait.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-18623773-bespectacled-young-male-on-off-white-background.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-18623773-bespectacled-young-male-on-off-white-background.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-21268029-old-western-town.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-21268029-old-western-town.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-29765448-portrait-of-a-young-man.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-29765448-portrait-of-a-young-man.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-42365852-man-wearing-sunglasses-and-suit-dreadlocks.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-42365852-man-wearing-sunglasses-and-suit-dreadlocks.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-48664290-shaving-brushes-at-barbershop.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-48664290-shaving-brushes-at-barbershop.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-50019520-barber-s-chair-ghost-town.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-50019520-barber-s-chair-ghost-town.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-52621018-barber.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-52621018-barber.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-55326536-sculptural-face-and-mohican-hairstyle.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-55326536-sculptural-face-and-mohican-hairstyle.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-55534146-barbershop-shack.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-55534146-barbershop-shack.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-58450262-turkish-thoughtful-young-man.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-58450262-turkish-thoughtful-young-man.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-58954580-i-ve-got-a-reason-to-smile.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-58954580-i-ve-got-a-reason-to-smile.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-6060043-hanging-sign.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-6060043-hanging-sign.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-9377769-hair-styled-man.jpg" afterPath="$PROJECT_DIR$/angular-seed/app/TGS-stock_photos/stock-photo-9377769-hair-styled-man.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/survey/survey.html" afterPath="$PROJECT_DIR$/angular-seed/app/survey/survey.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/survey/survey.js" afterPath="$PROJECT_DIR$/angular-seed/app/survey/survey.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/survey/survey.py" afterPath="$PROJECT_DIR$/angular-seed/app/survey/survey.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/vendor/vendor.js" afterPath="$PROJECT_DIR$/angular-seed/app/vendor/vendor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/vendor/vendor.py" afterPath="$PROJECT_DIR$/angular-seed/app/vendor/vendor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-seed/app/vendor/vendor_admin.html" afterPath="$PROJECT_DIR$/angular-seed/app/vendor/vendor_admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="appengine-angular-seed-python.iws" />
@@ -42,7 +46,7 @@
       <file leaf-file-name="survey.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="2340">
+            <state vertical-scroll-proportion="0.0" vertical-offset="852" max-vertical-offset="2340">
               <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
               <folding />
             </state>
@@ -52,8 +56,18 @@
       <file leaf-file-name="survey.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="3585">
-              <caret line="183" column="43" selection-start-line="183" selection-start-column="43" selection-end-line="183" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2459" max-vertical-offset="3615">
+              <caret line="193" column="65" selection-start-line="193" selection-start-column="65" selection-end-line="193" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="795">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,8 +76,8 @@
       <file leaf-file-name="survey.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5653179" vertical-offset="1701" max-vertical-offset="2610">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41275167" vertical-offset="1716" max-vertical-offset="2610">
+              <caret line="139" column="33" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#3;n#div#0;n#!!top" expanded="true" />
@@ -75,20 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vendor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-seed/app/vendor/vendor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="vendor_admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/vendor/vendor_admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-47.5" vertical-offset="0" max-vertical-offset="1770">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1770">
               <caret line="76" column="81" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -122,7 +126,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="375" max-vertical-offset="2475">
+            <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="2475">
               <caret line="47" column="25" selection-start-line="36" selection-start-column="20" selection-end-line="47" selection-end-column="25" />
               <folding />
             </state>
@@ -132,7 +136,7 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-seed/app/partials/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.375" vertical-offset="171" max-vertical-offset="1695">
+            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1695">
               <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -183,9 +187,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="34" />
-    <option name="width" value="1603" />
+    <option name="x" value="71" />
+    <option name="y" value="24" />
+    <option name="width" value="1609" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -214,6 +218,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,7 +337,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,21 +344,21 @@
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="188" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="227" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="197" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="233" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="202" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1142" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="979" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="188" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="227" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="197" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="233" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="202" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1142" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="979" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -537,11 +541,17 @@
       <option name="project" value="LOCAL" />
       <updated>1429154122724</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. Fixed bugs from last meeting&#10;&#10;2. Fixed image and nav-bar size and changed link color to white&#10;&#10;3. Added set up and linked social media icons. Google plus is set up with my email and contact info so let me know if we need to update this later. Linked in can not be setup with a gmail account so I will leave it off until we have our own email set up.&#10;&#10;4. Found a really cool contact us template and added it to the site.Please provide feedback. There is also a form to email us directly from the app that I have left out for now but would like to add in later.&#10;&#10;5. Become a vendor submission now goes to the grooming standard gmail account. &#10;&#10;6. Admin portal is now known as vendor survey and is now located at grooming-standard-dev.appspot.com/#/vendor survey.&#10;&#10;This change is because vendors can enter survey information meaning it is no longer an admin only page. We can still access it at the same spot or choose to share the link. There is no way to navigate to the page without the link or knowing the address mentioned above.I will still add validation so that we or the vendors must log in later. Please let me know if you have questions on any of this.&#10;&#10;7. Updated text on rankings page. Please provide feedback on this and let me know what to change. Also added some styling to the table and added user answers as reference.&#10;&#10;8. Added question 12 to rankings page and vendor survey.&#10;&#10;9. Added button to clear selection on rankings page.&#10;&#10;10. Fixed rotating images&#10;&#10;11.">
+      <created>1433126726350</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1433126726350</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="34" width="1603" height="1026" extended-state="0" />
+    <frame x="71" y="24" width="1609" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,21 +559,21 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28732044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28589186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49458483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47912318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6173285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974684" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -587,7 +597,8 @@
     <MESSAGE value="major updates completed" />
     <MESSAGE value="test" />
     <MESSAGE value="Survey questions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Survey questions added" />
+    <MESSAGE value="1. Fixed bugs from last meeting&#10;&#10;2. Fixed image and nav-bar size and changed link color to white&#10;&#10;3. Added set up and linked social media icons. Google plus is set up with my email and contact info so let me know if we need to update this later. Linked in can not be setup with a gmail account so I will leave it off until we have our own email set up.&#10;&#10;4. Found a really cool contact us template and added it to the site.Please provide feedback. There is also a form to email us directly from the app that I have left out for now but would like to add in later.&#10;&#10;5. Become a vendor submission now goes to the grooming standard gmail account. &#10;&#10;6. Admin portal is now known as vendor survey and is now located at grooming-standard-dev.appspot.com/#/vendor survey.&#10;&#10;This change is because vendors can enter survey information meaning it is no longer an admin only page. We can still access it at the same spot or choose to share the link. There is no way to navigate to the page without the link or knowing the address mentioned above.I will still add validation so that we or the vendors must log in later. Please let me know if you have questions on any of this.&#10;&#10;7. Updated text on rankings page. Please provide feedback on this and let me know what to change. Also added some styling to the table and added user answers as reference.&#10;&#10;8. Added question 12 to rankings page and vendor survey.&#10;&#10;9. Added button to clear selection on rankings page.&#10;&#10;10. Fixed rotating images&#10;&#10;11." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Fixed bugs from last meeting&#10;&#10;2. Fixed image and nav-bar size and changed link color to white&#10;&#10;3. Added set up and linked social media icons. Google plus is set up with my email and contact info so let me know if we need to update this later. Linked in can not be setup with a gmail account so I will leave it off until we have our own email set up.&#10;&#10;4. Found a really cool contact us template and added it to the site.Please provide feedback. There is also a form to email us directly from the app that I have left out for now but would like to add in later.&#10;&#10;5. Become a vendor submission now goes to the grooming standard gmail account. &#10;&#10;6. Admin portal is now known as vendor survey and is now located at grooming-standard-dev.appspot.com/#/vendor survey.&#10;&#10;This change is because vendors can enter survey information meaning it is no longer an admin only page. We can still access it at the same spot or choose to share the link. There is no way to navigate to the page without the link or knowing the address mentioned above.I will still add validation so that we or the vendors must log in later. Please let me know if you have questions on any of this.&#10;&#10;7. Updated text on rankings page. Please provide feedback on this and let me know what to change. Also added some styling to the table and added user answers as reference.&#10;&#10;8. Added question 12 to rankings page and vendor survey.&#10;&#10;9. Added button to clear selection on rankings page.&#10;&#10;10. Fixed rotating images&#10;&#10;11." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -867,13 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.397351" vertical-offset="0" max-vertical-offset="906">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51557463" vertical-offset="0" max-vertical-offset="931">
@@ -885,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,17 +910,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="2340">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/vendor/vendor_admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.5" vertical-offset="0" max-vertical-offset="1770">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1770">
           <caret line="76" column="81" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -927,7 +922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="375" max-vertical-offset="2475">
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="2475">
           <caret line="47" column="25" selection-start-line="36" selection-start-column="20" selection-end-line="47" selection-end-column="25" />
           <folding />
         </state>
@@ -935,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/partials/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.375" vertical-offset="171" max-vertical-offset="1695">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1695">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -951,18 +946,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="2340">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="795">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="3585">
-          <caret line="183" column="43" selection-start-line="183" selection-start-column="43" selection-end-line="183" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2459" max-vertical-offset="3615">
+          <caret line="193" column="65" selection-start-line="193" selection-start-column="65" selection-end-line="193" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-seed/app/survey/survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5653179" vertical-offset="1701" max-vertical-offset="2610">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41275167" vertical-offset="1716" max-vertical-offset="2610">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#3;n#div#0;n#!!top" expanded="true" />
